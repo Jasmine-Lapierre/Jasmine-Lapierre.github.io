@@ -154,20 +154,24 @@ text-shadow: rgba(62, 14, 0, 0.5) 5px 10px 8px;
     fill: black;
 }
 @keyframes tour {
-    to{
-        transform: translateX(0vw) translateY(-1vh) rotate(-1turn) ;
+    70%{
+        transform: translateX(-5vw) translateY(-1vh) rotate(-1.1turn) ;
     }
+    100%{
+        transform:  translateX(0vw) translateY(-1vh) rotate(-1turn) ;
+    };
+    
 }
 .rond{
     transform: translateX(30vw) translateY(-1vh);
     animation-name: tour;
+    animation-timing-function: ease-in-out;
+
     animation-duration: 1s;
+    animation-delay: 0.4s;
     animation-fill-mode: forwards;
     display: grid;
     place-items: center;
-    z-index: 5;
-    grid-column: 10/12;
-    grid-row: 3/10;
     background-image: url("medias/rond.png");
     width: 32vh;
     height: 32vh;
@@ -183,14 +187,20 @@ text-shadow: rgba(62, 14, 0, 0.5) 5px 10px 8px;
 }
 .rond:hover{
     background-image: url("medias/rond_hover.png");
+    z-index: 5;
 }
 @keyframes ligne {
-    to{
-        transform: translateX(0vw);
+    70%{
+        transform: translateX(-5vw);
+    }
+    100%{
+        transform:translateX(0vw)
     }
 }
 .lignes{
+    animation-delay: 0.4s;
     transform: translateX(20vw);
+    animation-timing-function: ease-in-out;
     animation-name: ligne;
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
@@ -202,4 +212,13 @@ text-shadow: rgba(62, 14, 0, 0.5) 5px 10px 8px;
     width:60vh;
     background-image:url("medias/ligne.png") ;
 
+}
+.lien{
+    display: inline-block;
+    position: relative;
+    display: grid;
+    z-index: 5;
+    grid-column: 10/12;
+    grid-row: 3/10; 
+    text-decoration: none;
 }
