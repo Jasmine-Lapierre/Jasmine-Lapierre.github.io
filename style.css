@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: Adine;
+    src: url(medias/Adine\ Kirnberg.ttf) format("truetype");
+}
+@keyframes rectangle{
+    60%{
+        transform: translateX(-3vw);
+    }
+    100%{
+        transform: translateX(0vw);
+
+    }
+}
+body{
+    background-color: #26083E;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+
+}
+nav{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(12,1fr);  
+    grid-column-gap: 3vw; 
+    height: 8vh;
+    width: 100vw;
+    position: relative;
+    }
+.logo{
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+.logo img{
+    object-fit: contain;
+    width: 100%;
+    min-width: 70px;
+}
+nav a{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #F4E6FF;
+    font-size: 2vw;
+    font-weight: thin;
+}
+.projet {
+    grid-row: 4/4;
+
+    grid-column: 10/11;
+
+}
+.contact{
+    grid-column:11/12;
+    grid-row: 4/4;
+
+}
+img{
+    object-fit:cover;
+    width: 100%;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0, 1fr));  
+    grid-template-rows: repeat(12,minmax(0, 1fr));
+    grid-column-gap: 3vw; 
+    width: 100vw;
+    height: 100vh;
+}
+.main .explication{
+    font-size:3vw;
+    color: #F4E6FF;
+    text-align: right;
+    grid-column: 7/12;
+    grid-row: 8/10;
+    display: inline-block;
+    line-height: 3.5vw;
+}
+
+.rectangle{
+    animation-name: rectangle;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    height: 30vh;
+    width: 80vw;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateX(75vw);
+    grid-column: 4/12;
+    grid-row: 3/10;
+}
+.rectangle:first-of-type{
+    background-color: #3B185F;
+    position: relative;
+    top: -8vh;
+    left: 10vw;
+    animation-delay: 0.4s;
+
+}
+.rectangle:nth-of-type(2){
+    background-color: #4C2D6C;
+    position: relative;
+    top: -4vh;
+    left: 5vw;
+    animation-delay: 0.2s;
+
+}
+.rectangle:nth-of-type(3){
+    background-color: #A12568;
+    position: relative;
+}
+
+.jasmine{    
+    position: relative;
+    grid-column: 3/12;
+    grid-row: 2/10;
+    z-index: 2;
+    top: 3vh;
+    font-size: 20vw;
+text-shadow: rgba(62, 14, 0, 0.5) 5px 10px 8px;
+    color:#F4E6FF;
+    text-transform: capitalize;
+    font-family: Adine, Arial, Helvetica, sans-serif;
+
+}
+
+#machin{
+    stroke-dasharray: 4;
+    fill: black;
+}
